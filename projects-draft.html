@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aishwarya | Projects</title>
+  <meta name="description" content="Aishwarya — Projects" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="portfolio.html" aria-label="Home">A</a>
+      <div class="nav-links">
+        <a href="portfolio.html">Home</a>
+        <a href="projects.html" class="pill">Projects</a>
+        <a href="experience.html">Experience</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <div class="section-head">
+      <h3>Projects</h3>
+      <p class="small">All featured work.</p>
+    </div>
+
+    <div class="toolbar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="streaming">Streaming</button>
+      <button class="filter-btn" data-filter="nlp">NLP/LLM</button>
+      <button class="filter-btn" data-filter="cv">Computer Vision</button>
+      <button class="filter-btn" data-filter="analytics">Analytics</button>
+    </div>
+
+    <div class="projects">
+      <!-- 1) AuditReadinessAI -->
+      <article class="project card" data-tags="analytics nlp">
+        <div class="project-top">
+          <h4>AuditReadinessAI</h4>
+          <span class="badge">AI Project</span>
+        </div>
+        <p class="small">
+          AI-powered auditing intelligence system analyzing remediation datasets, detecting compliance risks, and generating automated insights.
+        </p>
+        <p class="chips">
+          <span>Python</span><span>SQL</span><span>Data Analytics</span><span>NLP</span>
+        </p>
+        <div class="links">
+          <a href="https://github.com/aishwaryamy/auditreadinessai" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+      </article>
+
+      <!-- 2) Real-time Anomaly Detection -->
+      <article class="project card" data-tags="streaming ml cloud">
+        <div class="project-top">
+          <h4>Real-time Anomaly Detection Pipeline</h4>
+          <span class="badge">Streaming ML</span>
+        </div>
+        <p class="small">
+          Built a Kafka → Spark pipeline to detect anomalies in event streams, with a deployable inference API.
+        </p>
+        <ul class="bullets">
+          <li><b>Problem:</b> Slow detection + noisy alerts in streaming data.</li>
+          <li><b>Solution:</b> Feature pipeline + training + inference service + alerting.</li>
+          <li><b>Impact:</b> ~60% faster detection; handled <i>XXK events/min</i> in load tests.</li>
+        </ul>
+        <p class="chips">
+          <span>Kafka</span><span>Spark</span><span>PySpark</span><span>Python</span><span>Docker</span><span>AWS</span>
+        </p>
+        <div class="links">
+          <a href="#" target="_blank" rel="noopener">Demo</a>
+          <a href="#" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">Case Study</a>
+        </div>
+      </article>
+
+      <!-- 3) RAG Assistant -->
+      <article class="project card" data-tags="nlp ml cloud">
+        <div class="project-top">
+          <h4>RAG Assistant for “Company Docs” Search</h4>
+          <span class="badge">LLM + Retrieval</span>
+        </div>
+        <p class="small">
+          Built a retrieval-augmented assistant that answers questions from internal docs with citations and guardrails.
+        </p>
+        <ul class="bullets">
+          <li><b>Problem:</b> Knowledge scattered across docs; slow onboarding + support.</li>
+          <li><b>Solution:</b> Chunking + embeddings + vector store + citations.</li>
+          <li><b>Impact:</b> Reduced time-to-answer by <i>~X%</i>; improved consistency.</li>
+        </ul>
+        <p class="chips">
+          <span>OpenAI API</span><span>Hugging Face</span><span>Python</span><span>FastAPI</span><span>Docker</span>
+        </p>
+        <div class="links">
+          <a href="#" target="_blank" rel="noopener">Demo</a>
+          <a href="#" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">Write-up</a>
+        </div>
+      </article>
+
+      <!-- 4) CV Quality Inspection -->
+      <article class="project card" data-tags="cv ml">
+        <div class="project-top">
+          <h4>Computer Vision Quality Inspection</h4>
+          <span class="badge">CV</span>
+        </div>
+        <p class="small">
+          Trained a vision model to detect defects and served predictions via a simple API + dashboard view.
+        </p>
+        <ul class="bullets">
+          <li><b>Problem:</b> Manual checks were slow + inconsistent.</li>
+          <li><b>Solution:</b> Labeling strategy + model training + inference endpoint.</li>
+          <li><b>Impact:</b> Achieved <i>XX% precision</i>; reduced review time by <i>~X%</i>.</li>
+        </ul>
+        <p class="chips">
+          <span>OpenCV</span><span>PyTorch</span><span>Python</span><span>REST API</span>
+        </p>
+        <div class="links">
+          <a href="#" target="_blank" rel="noopener">Demo</a>
+          <a href="#" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" target="_blank" rel="noopener">Notes</a>
+        </div>
+      </article>
+
+      <!-- 5) KPI Dashboard -->
+      <article class="project card" data-tags="analytics">
+        <div class="project-top">
+          <h4>Metrics & KPI Analytics Dashboard</h4>
+          <span class="badge">Analytics</span>
+        </div>
+        <p class="small">
+          Built KPI reporting with clean metric definitions, automated refresh, and exec-friendly views.
+        </p>
+        <ul class="bullets">
+          <li><b>Problem:</b> Conflicting metric definitions and manual reporting.</li>
+          <li><b>Solution:</b> SQL models + pipeline + dashboard.</li>
+          <li><b>Impact:</b> Cut reporting time by <i>~X hrs/week</i>.</li>
+        </ul>
+        <p class="chips">
+          <span>SQL</span><span>Power BI</span><span>Tableau</span><span>Excel</span>
+        </p>
+        <div class="links">
+          <a href="#" target="_blank" rel="noopener">Screens</a>
+          <a href="#" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </article>
+    </div>
+
+    <div style="margin-top:14px;">
+      <a class="btn" href="portfolio.html">← Back to portfolio</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
