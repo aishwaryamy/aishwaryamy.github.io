@@ -4,12 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Aishwarya Mandya Yogananda | Data & ML Engineer</title>
-
   <meta name="description"
     content="Aishwarya — Data & Machine Learning Engineer building scalable data systems and production ML." />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -55,10 +52,10 @@
         </p>
 
         <div class="hero-links">
-          <a class="hero-social" href="https://github.com/aishwaryamy" target="_blank">GitHub</a>
-          <a class="hero-social" href="https://www.linkedin.com/in/aishwaryamy/" target="_blank">LinkedIn</a>
+          <a class="hero-social" href="https://github.com/aishwaryamy" target="_blank" rel="noopener">GitHub</a>
+          <a class="hero-social" href="https://www.linkedin.com/in/aishwaryamy/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="hero-social" href="mailto:amandyayogan@binghamton.edu">Email</a>
-          <a class="hero-social" href="./assets/Aishwarya_Yogananda_Resume .pdf" target="_blank">Resume</a>
+          <a class="hero-social" href="./assets/Aishwarya_Yogananda_Resume .pdf" target="_blank" rel="noopener">Resume</a>
         </div>
 
         <div class="meta-row">
@@ -72,7 +69,6 @@
 
     <!-- EXPERIENCE -->
     <section class="container section">
-
       <div class="section-head">
         <h3>Experience</h3>
         <p class="small">
@@ -157,64 +153,29 @@
 
       </div>
 
-      <div style="margin-top:14px;">
+      <div style="margin-top: 14px;">
         <a class="btn" href="experience.html">See all experience →</a>
       </div>
-
     </section>
 
     <!-- PROJECTS -->
     <section id="work" class="container section">
-
       <div class="section-head">
         <h3>Featured Projects</h3>
-        <p class="small">Selected work showcasing my skills</p>
+        <p class="small">Selected work showcasing my skills and experience.</p>
       </div>
 
       <div class="projects">
 
-        <!-- AI Agent -->
-        <article class="project card">
-          <div class="project-top">
-            <h4>AI Contact Enrichment Agent</h4>
-            <span class="badge">Agentic AI</span>
-          </div>
-
-          <p class="small">
-            Conversational AI agent that enriches B2B contacts with company intel,
-            buying signals, and personalized outreach in seconds.
-          </p>
-
-          <ul class="bullets">
-            <li>Automated real-time web research using GPT-4o.</li>
-            <li>Built conversational UI for lead qualification.</li>
-            <li>Stored structured outputs in Supabase.</li>
-          </ul>
-
-          <p class="chips">
-            <span>Next.js</span>
-            <span>TypeScript</span>
-            <span>OpenAI API</span>
-            <span>Tailwind CSS</span>
-            <span>Supabase</span>
-            <span>GPT-4o</span>
-          </p>
-
-          <div class="links">
-            <a href="https://github.com/aishwaryamy/ai-enrichment-agent" target="_blank">GitHub →</a>
-            <a href="https://ai-enrichment-agent.vercel.app/" target="_blank">Live Demo →</a>
-          </div>
-        </article>
-
-        <!-- Audit -->
-        <article class="project card">
+        <!-- AuditReadinessAI -->
+        <article class="project card" data-tags="analytics nlp">
           <div class="project-top">
             <h4>AuditReadinessAI</h4>
-            <span class="badge">AI</span>
+            <span class="badge">AI Project</span>
           </div>
 
           <p class="small">
-            AI system analyzing remediation datasets to detect compliance risks.
+            Built an auditing intelligence tool that analyzes remediation datasets to surface compliance risks and generate structured insights.
           </p>
 
           <p class="chips">
@@ -222,9 +183,46 @@
             <span>SQL</span>
             <span>NLP</span>
           </p>
+
+          <div class="links">
+            <a href="https://github.com/aishwaryamy/auditreadinessai" target="_blank" rel="noopener">GitHub →</a>
+          </div>
         </article>
 
-        <!-- GTM -->
+        <!-- AI Contact Enrichment Agent -->
+        <article class="project card" data-tags="ai agents crm">
+          <div class="project-top">
+            <h4>AI Contact Enrichment Agent</h4>
+            <span class="badge">Agentic AI</span>
+          </div>
+
+          <p class="small">
+            A conversational AI agent that replaces manual B2B contact research — enriching any prospect in 45 seconds with live company intel, buying signals, ICP scoring, and a personalized outreach email.
+          </p>
+
+          <ul class="bullets">
+            <li><b>Agentic web search:</b> GPT-4o autonomously searches the web in real time to extract buying signals, tech stack, funding stage, and recent news.</li>
+            <li><b>Conversational interface:</b> Chat-based workflow for enrichment and follow-up questions.</li>
+            <li><b>Persistent history:</b> Structured outputs are stored in Supabase for reuse across sessions.</li>
+          </ul>
+
+          <p class="chips">
+            <span>Next.js</span>
+            <span>TypeScript</span>
+            <span>OpenAI API</span>
+            <span>GPT-4o</span>
+            <span>Supabase</span>
+            <span>Tailwind CSS</span>
+            <span>Vercel</span>
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/aishwaryamy/ai-enrichment-agent" target="_blank" rel="noopener">GitHub →</a>
+            <a href="https://ai-enrichment-agent-xyz.vercel.app" target="_blank" rel="noopener">Live Demo →</a>
+          </div>
+        </article>
+
+        <!-- AI GTM Copilot -->
         <article class="project card">
           <div class="project-top">
             <h4>AI GTM Copilot</h4>
@@ -232,23 +230,93 @@
           </div>
 
           <p class="small">
-            AI-powered CRM workflow for company research and outreach.
+            AI-powered workflow prototype designed to streamline go-to-market processes including company research, lead qualification, and outreach generation.
           </p>
+
+          <ul class="bullets">
+            <li><b>AI Company Research:</b> Generates structured company insights and sales positioning.</li>
+            <li><b>Automated Outreach:</b> Personalized emails using OpenAI APIs.</li>
+            <li><b>Lead Scoring:</b> Prioritizes prospects based on GTM signals.</li>
+          </ul>
 
           <p class="chips">
             <span>Python</span>
             <span>Streamlit</span>
             <span>OpenAI API</span>
+            <span>SQLite</span>
+            <span>Pandas</span>
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/aishwaryamy/ai-gtm-copilot" target="_blank" rel="noopener">GitHub →</a>
+            <a href="https://ai-gtm-copilot.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+          </div>
+        </article>
+
+        <!-- ReviewGuard -->
+        <article class="project card">
+          <div class="project-top">
+            <h4>ReviewGuard (Fake Review Detection)</h4>
+            <span class="badge">NLP</span>
+          </div>
+
+          <p class="small">
+            Built an NLP classification pipeline to identify fraudulent reviews using opinion-mining features and F1-score optimization.
+          </p>
+
+          <p class="chips">
+            <span>Python</span>
+            <span>NLTK</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+          </p>
+        </article>
+
+        <!-- DataSure -->
+        <article class="project card">
+          <div class="project-top">
+            <h4>DataSure (Enterprise Data Validation)</h4>
+            <span class="badge">Data Engineering</span>
+          </div>
+
+          <p class="small">
+            Designed an automated validation + ETL-style workflow to reduce inconsistencies in enterprise datasets.
+          </p>
+
+          <p class="chips">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Excel</span>
+          </p>
+        </article>
+
+        <!-- FaceSynth -->
+        <article class="project card">
+          <div class="project-top">
+            <h4>FaceSynth ID (AI Facial Synthesis)</h4>
+            <span class="badge">Computer Vision</span>
+          </div>
+
+          <p class="small">
+            Implemented a CNN-based facial synthesis pipeline with OpenCV preprocessing for identity-style image generation.
+          </p>
+
+          <p class="chips">
+            <span>TensorFlow</span>
+            <span>OpenCV</span>
+            <span>Python</span>
           </p>
         </article>
 
       </div>
 
+      <div style="margin-top: 14px;">
+        <a class="btn" href="projects.html">See all projects →</a>
+      </div>
     </section>
 
     <!-- STACK -->
     <section id="stack" class="container section">
-
       <div class="section-head">
         <h3>Skills & Tools</h3>
       </div>
@@ -256,28 +324,48 @@
       <div class="stack-grid">
 
         <div class="card">
-          <p class="card-title">Programming</p>
+          <p class="card-title">Programming Languages</p>
           <p class="chips">
-            <span>Python</span><span>SQL</span><span>C++</span><span>Java</span>
+            <span>Python</span><span>SQL</span><span>C++</span><span>R</span><span>Java</span>
           </p>
         </div>
 
         <div class="card">
-          <p class="card-title">ML & AI</p>
+          <p class="card-title">Machine Learning & AI</p>
           <p class="chips">
-            <span>PyTorch</span><span>TensorFlow</span><span>LLMs</span>
+            <span>Scikit-learn</span><span>PyTorch</span><span>TensorFlow</span><span>Hugging Face</span><span>OpenAI API</span>
           </p>
         </div>
 
         <div class="card">
-          <p class="card-title">Cloud & Data</p>
+          <p class="card-title">Data</p>
           <p class="chips">
-            <span>AWS</span><span>Docker</span><span>Kafka</span>
+            <span>Kafka</span><span>Spark</span><span>PySpark</span><span>Pandas</span><span>Snowflake</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="card-title">Cloud & DevOps</p>
+          <p class="chips">
+            <span>AWS</span><span>Azure</span><span>GCP</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>Linux</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="card-title">Databases</p>
+          <p class="chips">
+            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Oracle</span>
+          </p>
+        </div>
+
+        <div class="card subtle">
+          <p class="card-title">Also</p>
+          <p class="small">
+            Power BI, Tableau, Excel, KPI reporting, REST APIs.
           </p>
         </div>
 
       </div>
-
     </section>
 
     <!-- ABOUT -->
@@ -288,29 +376,69 @@
 
       <div class="about card">
         <p class="lead">
-          I build end-to-end ML systems from data pipelines to deployment.
+          I build end-to-end ML systems: data → models → deployment.
         </p>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- GET IN TOUCH -->
     <section id="contact" class="container section">
       <div class="section-head">
-        <h3>Contact</h3>
+        <h3>Get in Touch</h3>
+        <p class="small">Have an opportunity, collaboration, or project in mind? Send me a message.</p>
       </div>
 
-      <div class="contact card">
-        <div class="contact-row">
-          <a class="btn primary" href="mailto:amandyayogan@binghamton.edu">Email</a>
-          <a class="btn" href="https://github.com/aishwaryamy" target="_blank">GitHub</a>
-          <a class="btn" href="https://linkedin.com/in/aishwaryamy" target="_blank">LinkedIn</a>
-        </div>
+      <div class="card" style="padding: 24px; max-width: 760px;">
+        <form action="mailto:amandyayogan@binghamton.edu" method="post" enctype="text/plain">
+          <div style="display: flex; flex-direction: column; gap: 16px;">
 
-        <p class="small muted">© 2026 Aishwarya</p>
+            <div>
+              <label for="name" style="display:block; margin-bottom:8px; font-weight:600;">Your Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="What's your good name?"
+                style="width:100%; padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,0.10); background:rgba(255,255,255,0.04); color:white; outline:none;"
+              />
+            </div>
+
+            <div>
+              <label for="email" style="display:block; margin-bottom:8px; font-weight:600;">Your Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="What's your email address?"
+                style="width:100%; padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,0.10); background:rgba(255,255,255,0.04); color:white; outline:none;"
+              />
+            </div>
+
+            <div>
+              <label for="message" style="display:block; margin-bottom:8px; font-weight:600;">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="What would you like to say?"
+                style="width:100%; padding:14px 16px; border-radius:12px; border:1px solid rgba(255,255,255,0.10); background:rgba(255,255,255,0.04); color:white; outline:none; resize:vertical;"
+              ></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn primary">Send</button>
+            </div>
+
+          </div>
+        </form>
       </div>
+
+      <p class="small muted" style="margin-top: 18px;">© 2026 Aishwarya</p>
     </section>
 
   </main>
 
+  <script src="script.js"></script>
 </body>
+
 </html>
