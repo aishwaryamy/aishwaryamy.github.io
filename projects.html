@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -8,9 +9,12 @@
 </head>
 
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <nav class="nav container">
       <a class="logo" href="portfolio.html">Aishwarya</a>
+
       <div class="nav-links">
         <a href="portfolio.html">Home</a>
         <a href="projects.html" class="pill">Projects</a>
@@ -21,12 +25,47 @@
 
   <main class="container section">
 
+    <!-- TITLE -->
     <div class="section-head">
       <h3>Projects</h3>
       <p class="small">All featured work.</p>
     </div>
 
+    <!-- PROJECT GRID -->
     <div class="projects">
+
+      <!-- AI Contact Enrichment Agent (NEW - TOP PROJECT) -->
+      <article class="project card" data-tags="ai agents crm">
+        <div class="project-top">
+          <h4>AI Contact Enrichment Agent</h4>
+          <span class="badge">Agentic AI</span>
+        </div>
+
+        <p class="small">
+          A conversational AI agent that replaces manual B2B contact research — enriching any prospect in seconds with live company intel, buying signals, ICP scoring, and personalized outreach.
+        </p>
+
+        <ul class="bullets">
+          <li><b>Agentic web search:</b> GPT-4o autonomously gathers real-time company insights and signals.</li>
+          <li><b>Conversational interface:</b> Chat-based workflow for lead qualification and follow-ups.</li>
+          <li><b>Persistent history:</b> Stored structured outputs using Supabase for reuse.</li>
+        </ul>
+
+        <p class="chips">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>OpenAI API</span>
+          <span>GPT-4o</span>
+          <span>Supabase</span>
+          <span>Tailwind</span>
+          <span>Vercel</span>
+        </p>
+
+        <div class="links">
+          <a href="https://github.com/aishwaryamy/ai-enrichment-agent" target="_blank" rel="noopener">GitHub →</a>
+          <a href="https://ai-enrichment-agent.vercel.app/" target="_blank" rel="noopener">Live Demo →</a>
+        </div>
+      </article>
 
       <!-- AuditReadinessAI -->
       <article class="project card" data-tags="analytics nlp">
@@ -34,12 +73,17 @@
           <h4>AuditReadinessAI</h4>
           <span class="badge">AI Project</span>
         </div>
+
         <p class="small">
           Built an auditing intelligence tool that analyzes remediation datasets to surface compliance risks and generate structured insights.
         </p>
+
         <p class="chips">
-          <span>Python</span><span>SQL</span><span>NLP</span>
+          <span>Python</span>
+          <span>SQL</span>
+          <span>NLP</span>
         </p>
+
         <div class="links">
           <a href="https://github.com/aishwaryamy/auditreadinessai" target="_blank">GitHub →</a>
         </div>
@@ -51,11 +95,16 @@
           <h4>ReviewGuard (Fake Review Detector)</h4>
           <span class="badge">NLP</span>
         </div>
+
         <p class="small">
           Built an NLP classification pipeline to identify fraudulent reviews using opinion-mining features and F1-score optimization.
         </p>
+
         <p class="chips">
-          <span>Python</span><span>NLTK</span><span>Pandas</span><span>scikit-learn</span>
+          <span>Python</span>
+          <span>NLTK</span>
+          <span>Pandas</span>
+          <span>scikit-learn</span>
         </p>
       </article>
 
@@ -65,11 +114,15 @@
           <h4>DataSure (Enterprise Validation)</h4>
           <span class="badge">Data Engineering</span>
         </div>
+
         <p class="small">
           Designed an automated validation + ETL-style workflow to reduce inconsistencies in large datasets and improve reporting reliability.
         </p>
+
         <p class="chips">
-          <span>Python</span><span>SQL</span><span>Excel</span>
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Excel</span>
         </p>
       </article>
 
@@ -79,16 +132,21 @@
           <h4>FaceSynth ID (AI Facial Synthesis)</h4>
           <span class="badge">Computer Vision</span>
         </div>
+
         <p class="small">
-          Implemented a CNN-based facial synthesis pipeline with OpenCV preprocessing to generate realistic identity-style outputs for research use cases.
+          Implemented a CNN-based facial synthesis pipeline with OpenCV preprocessing to generate realistic identity-style outputs.
         </p>
+
         <p class="chips">
-          <span>TensorFlow</span><span>OpenCV</span><span>Python</span>
+          <span>TensorFlow</span>
+          <span>OpenCV</span>
+          <span>Python</span>
         </p>
       </article>
 
     </div>
 
+    <!-- BACK BUTTON -->
     <div style="margin-top:20px;">
       <a class="btn" href="portfolio.html">← Back to portfolio</a>
     </div>
@@ -96,5 +154,6 @@
   </main>
 
   <script src="script.js"></script>
+
 </body>
 </html>
