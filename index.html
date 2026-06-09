@@ -113,7 +113,7 @@
     .about-photo { width: 260px; height: 260px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(200,213,160,0.25); box-shadow: 0 0 60px rgba(200,213,160,0.10); flex-shrink: 0; }
 
     /* ── EDUCATION ── */
-    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 860px; margin: 0 auto; }
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 860px; margin: 0 auto; align-items: start; }
     .edu-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: default; transition: border-color 200ms; }
     .edu-card:hover { border-color: var(--accent); }
     .edu-card-header { padding: 28px; display: flex; flex-direction: column; gap: 6px; }
@@ -122,7 +122,7 @@
     .edu-card-date { font-size: 12px; color: var(--muted2); }
     .edu-hint { font-size:12px; color:var(--muted2); letter-spacing:.05em; padding:8px 28px 14px; transition: opacity 200ms; }
     
-    .edu-card-body { max-height: 0; overflow: hidden; transition: max-height 400ms ease; }
+    .edu-card-body { max-height: 0; overflow: hidden; transition: max-height 400ms ease; pointer-events: none; }
     .edu-card-body-inner { padding: 0 28px 24px; display: flex; flex-wrap: wrap; gap: 8px; }
     .edu-course { font-size: 12px; padding: 4px 12px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
 
@@ -310,7 +310,7 @@
               </div>
               <div class="comp-card-content">
                 <h4>Cloud & MLOps</h4>
-                <p>AWS (EC2, S3, IAM), GCP, Docker, Kubernetes, MLflow, Prometheus / Grafana, CI/CD.</p>
+                <p>AWS (EC2, S3, IAM), GCP, Docker, Kubernetes, MLflow, CI/CD.</p>
               </div>
             </div>
           </div>
@@ -540,8 +540,6 @@
       <div class="skill-item"><img src="https://cdn.simpleicons.org/docker/2496ED" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Docker</div>
       <div class="skill-item"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Kubernetes</div>
       <div class="skill-item"><img src="https://cdn.simpleicons.org/githubactions/2088FF" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>CI/CD</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/prometheus/E6522C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Prometheus</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/grafana/F46800" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Grafana</div>
       <div class="skill-item"><img src="https://cdn.simpleicons.org/mlflow/0194E2" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>MLflow</div>
       <div class="skill-item"><img src="https://cdn.simpleicons.org/vercel/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Vercel / Render</div>
     </div>
