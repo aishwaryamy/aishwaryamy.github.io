@@ -115,13 +115,13 @@
     /* ── EDUCATION ── */
     .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 860px; margin: 0 auto; }
     .edu-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: default; transition: border-color 200ms; }
-    .edu-card:hover { border-color: var(--accent); } .edu-card:hover .edu-card-body { max-height: 600px !important; } .edu-card:hover .edu-card-chevron { transform: rotate(180deg); }
+    .edu-card:hover { border-color: var(--accent); } .edu-card:hover .edu-card-body { max-height: 600px !important; }
     .edu-card-header { padding: 28px; display: flex; flex-direction: column; gap: 6px; }
     .edu-card-school { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 600; }
     .edu-card-degree { font-size: 13px; color: var(--muted); }
     .edu-card-date { font-size: 12px; color: var(--muted2); }
-    .edu-card-chevron { text-align: center; padding: 10px; font-size: 18px; color: var(--muted2); transition: transform 250ms; }
-    .edu-card.open .edu-card-chevron { transform: rotate(180deg); }
+    .edu-hint { font-size:12px; color:var(--muted2); letter-spacing:.05em; padding:8px 28px 14px; transition: opacity 200ms; }
+    
     .edu-card-body { max-height: 0; overflow: hidden; transition: max-height 400ms ease; }
     .edu-card-body-inner { padding: 0 28px 24px; display: flex; flex-wrap: wrap; gap: 8px; }
     .edu-course { font-size: 12px; padding: 4px 12px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
@@ -339,7 +339,7 @@
           <div class="edu-card-degree">M.S. in Computer Science</div>
           <div class="edu-card-date">Aug 2024 – May 2026 · New York, USA</div>
         </div>
-        <div class="edu-card-chevron" style="font-size:12px;color:var(--muted2);letter-spacing:.05em;padding:8px 28px 12px;text-align:left;">hover to see courses ↓</div>
+        <div class="edu-hint">hover to see courses ↓</div>
         <div class="edu-card-body">
           <div class="edu-card-body-inner">
             <span class="edu-course">Programming Languages</span><span class="edu-course">Design &amp; Analysis of Algorithms</span><span class="edu-course">Programming Systems &amp; Tools</span><span class="edu-course">Systems Programming</span><span class="edu-course">Cyber Security</span><span class="edu-course">SW &amp; Engineering Project Mgmt</span><span class="edu-course">Applied Cybersecurity Topics</span><span class="edu-course">Design Patterns</span><span class="edu-course">Intro to Cloud Computing</span><span class="edu-course">Independent Study</span><span class="edu-course">CS Professional Development</span>
@@ -355,7 +355,7 @@
           <div class="edu-card-degree">B.E. in Information Science & Engineering</div>
           <div class="edu-card-date">Sep 2020 – May 2024 · Bengaluru, India</div>
         </div>
-        <div class="edu-card-chevron" style="font-size:12px;color:var(--muted2);letter-spacing:.05em;padding:8px 28px 12px;text-align:left;">hover to see courses ↓</div>
+        <div class="edu-hint">hover to see courses ↓</div>
         <div class="edu-card-body">
           <div class="edu-card-body-inner">
             <span class="edu-course">Data Structures &amp; Algorithms</span><span class="edu-course">Discrete Mathematics</span><span class="edu-course">Computer Organization &amp; Architecture</span><span class="edu-course">OOPs with Java</span><span class="edu-course">Database Management System</span><span class="edu-course">Design &amp; Analysis of Algorithms</span><span class="edu-course">Software Engineering</span><span class="edu-course">Finite Automata &amp; Formal Language</span><span class="edu-course">Machine Learning</span><span class="edu-course">Operating Systems</span><span class="edu-course">Communication Networks</span><span class="edu-course">Data Mining</span><span class="edu-course">Software Testing</span><span class="edu-course">Internet of Things</span><span class="edu-course">Object-Oriented System Development</span><span class="edu-course">C &amp; Python Programming</span><span class="edu-course">Biometrics</span>
@@ -481,75 +481,129 @@
       <button class="skill-tab" data-panel="cloud">Cloud &amp; DevOps</button>
     </div>
 
+    
     <div id="panel-ml" class="skill-panel active">
       <div class="skill-item"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PyTorch</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>TensorFlow</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Scikit-learn</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/keras/D00000" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Keras</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Hugging Face</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/opencv/5C3EE8" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>OpenCV</div>
+      
       <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>NumPy</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/openai/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Whisper</div>
+      
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/openai/10a37f" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Whisper</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/xgboost/189FDD" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>XGBoost</div>
+      
     </div>
 
     <div id="panel-llm" class="skill-panel">
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/openai/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>OpenAI API</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/anthropic/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Claude API</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>LangChain</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>LangGraph</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/openai/10a37f" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>OpenAI API</div>
+      
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/anthropic/D97757" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Claude API</div>
+      
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/langchain/00A67E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>LangChain</div>
+      
+      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="12" r="2.5" fill="#7C3AED"/><circle cx="19" cy="5" r="2.5" fill="#7C3AED"/><circle cx="19" cy="19" r="2.5" fill="#7C3AED"/><line x1="7.2" y1="10.8" x2="17" y2="6.2" stroke="#7C3AED" stroke-width="1.5"/><line x1="7.2" y1="13.2" x2="17" y2="17.8" stroke="#7C3AED" stroke-width="1.5"/><line x1="19" y1="7.5" x2="19" y2="16.5" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="2 1.5"/></svg>LangGraph</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/meta/0467DF" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Llama</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/pinecone/000000" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>Vector Search</div>
-      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#C8D5A0"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1f1a">RAG</text></svg>RAG</div>
-      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#4A90D9"/><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="bold" fill="white">MCP</text></svg>MCP</div>
-      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#6C63FF"/><text x="12" y="16" text-anchor="middle" font-size="8" font-weight="bold" fill="white">FAISS</text></svg>FAISS</div>
+      
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/pinecone/000000" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Vector Search</div>
+      
+      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#C8D5A0"/><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="bold" fill="#1a1f1a">RAG</text></svg>RAG</div>
+      
+      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#4A90D9"/><text x="12" y="16" text-anchor="middle" font-size="8" font-weight="bold" fill="white">MCP</text></svg>MCP</div>
+      
+      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#6C63FF"/><text x="12" y="16" text-anchor="middle" font-size="7.5" font-weight="bold" fill="white">FAISS</text></svg>FAISS</div>
+      
     </div>
 
     <div id="panel-backend" class="skill-panel">
       <div class="skill-item"><img src="https://cdn.simpleicons.org/fastapi/009688" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>FastAPI</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/flask/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Flask</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/nodedotjs/339933" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Node.js</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Next.js</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/react/61DAFB" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>React</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/express/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Express.js</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/graphql/E10098" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>GraphQL</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/celery/37814A" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Celery</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/sqlalchemy/D71F00" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>SQLAlchemy</div>
+      
     </div>
 
     <div id="panel-languages" class="skill-panel">
       <div class="skill-item"><img src="https://cdn.simpleicons.org/python/3776AB" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Python</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/typescript/3178C6" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>TypeScript</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>JavaScript</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/cplusplus/00599C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>C / C++</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/java/007396" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Java</div>
+      
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Java</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/postgresql/4169E1" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>SQL</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/php/777BB4" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PHP</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/powershell/5391FE" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PowerShell</div>
+      
     </div>
 
     <div id="panel-data" class="skill-panel">
       <div class="skill-item"><img src="https://cdn.simpleicons.org/postgresql/4169E1" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PostgreSQL</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/mongodb/47A248" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>MongoDB</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/sqlite/003B57" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>SQLite</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/redis/DC382D" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Redis</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/pandas/150458" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>Pandas</div>
+      
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/pandas/150458" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Pandas</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Spark</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/snowflake/29B5E8" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Snowflake</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/supabase/3ECF8E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Supabase</div>
-      <div class="skill-item"><img src="https://cdn.simpleicons.org/pinecone/000000" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>pgvector</div>
+      
+      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#4169E1"/><text x="12" y="16" text-anchor="middle" font-size="6.5" font-weight="bold" fill="white">pgvec</text></svg>pgvector</div>
+      
     </div>
 
     <div id="panel-cloud" class="skill-panel">
       <div class="skill-item"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>AWS</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>GCP</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/docker/2496ED" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Docker</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Kubernetes</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/githubactions/2088FF" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>CI/CD</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/prometheus/E6522C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Prometheus</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/grafana/F46800" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Grafana</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/mlflow/0194E2" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>MLflow</div>
+      
       <div class="skill-item"><img src="https://cdn.simpleicons.org/vercel/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Vercel / Render</div>
+      
     </div>
   </div>
 </section>
