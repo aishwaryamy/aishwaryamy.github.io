@@ -114,15 +114,15 @@
 
     /* ── EDUCATION ── */
     .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 860px; margin: 0 auto; }
-    .edu-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color 200ms; }
-    .edu-card:hover { border-color: var(--border2); }
+    .edu-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: default; transition: border-color 200ms; }
+    .edu-card:hover { border-color: var(--accent); } .edu-card:hover .edu-card-body { max-height: 600px !important; } .edu-card:hover .edu-card-chevron { transform: rotate(180deg); }
     .edu-card-header { padding: 28px; display: flex; flex-direction: column; gap: 6px; }
     .edu-card-school { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 600; }
     .edu-card-degree { font-size: 13px; color: var(--muted); }
     .edu-card-date { font-size: 12px; color: var(--muted2); }
     .edu-card-chevron { text-align: center; padding: 10px; font-size: 18px; color: var(--muted2); transition: transform 250ms; }
     .edu-card.open .edu-card-chevron { transform: rotate(180deg); }
-    .edu-card-body { max-height: 0; overflow: hidden; transition: max-height 350ms ease; }
+    .edu-card-body { max-height: 0; overflow: hidden; transition: max-height 400ms ease; }
     .edu-card-body-inner { padding: 0 28px 24px; display: flex; flex-wrap: wrap; gap: 8px; }
     .edu-course { font-size: 12px; padding: 4px 12px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
 
@@ -330,8 +330,8 @@
   <div class="container reveal">
     <h2 class="section-title">Education</h2>
     <div class="edu-grid">
-      <div class="edu-card open">
-        <div class="edu-card-header" onclick="toggleEdu(this)">
+      <div class="edu-card">
+        <div class="edu-card-header">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
             <img src="https://www.google.com/s2/favicons?domain=binghamton.edu&sz=40" style="width:40px;height:40px;border-radius:8px;object-fit:contain;background:#fff;padding:4px;" onerror="this.style.display='none'"/>
             <div class="edu-card-school">Binghamton University, SUNY</div>
@@ -339,15 +339,15 @@
           <div class="edu-card-degree">M.S. in Computer Science</div>
           <div class="edu-card-date">Aug 2024 – May 2026 · New York, USA</div>
         </div>
-        <div class="edu-card-chevron">⌄</div>
-        <div class="edu-card-body" style="max-height:200px;">
+        <div class="edu-card-chevron" style="font-size:12px;color:var(--muted2);letter-spacing:.05em;padding:8px 28px 12px;text-align:left;">hover to see courses ↓</div>
+        <div class="edu-card-body">
           <div class="edu-card-body-inner">
             <span class="edu-course">Programming Languages</span><span class="edu-course">Design &amp; Analysis of Algorithms</span><span class="edu-course">Programming Systems &amp; Tools</span><span class="edu-course">Systems Programming</span><span class="edu-course">Cyber Security</span><span class="edu-course">SW &amp; Engineering Project Mgmt</span><span class="edu-course">Applied Cybersecurity Topics</span><span class="edu-course">Design Patterns</span><span class="edu-course">Intro to Cloud Computing</span><span class="edu-course">Independent Study</span><span class="edu-course">CS Professional Development</span>
           </div>
         </div>
       </div>
       <div class="edu-card">
-        <div class="edu-card-header" onclick="toggleEdu(this)">
+        <div class="edu-card-header">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
             <img src="data:image/jpeg;base64,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" style="width:40px;height:40px;border-radius:8px;object-fit:contain;background:#fff;padding:4px;" onerror="this.style.display='none'"/>
             <div class="edu-card-school">Visvesvaraya Technological University</div>
@@ -355,7 +355,7 @@
           <div class="edu-card-degree">B.E. in Information Science & Engineering</div>
           <div class="edu-card-date">Sep 2020 – May 2024 · Bengaluru, India</div>
         </div>
-        <div class="edu-card-chevron">⌄</div>
+        <div class="edu-card-chevron" style="font-size:12px;color:var(--muted2);letter-spacing:.05em;padding:8px 28px 12px;text-align:left;">hover to see courses ↓</div>
         <div class="edu-card-body">
           <div class="edu-card-body-inner">
             <span class="edu-course">Data Structures &amp; Algorithms</span><span class="edu-course">Discrete Mathematics</span><span class="edu-course">Computer Organization &amp; Architecture</span><span class="edu-course">OOPs with Java</span><span class="edu-course">Database Management System</span><span class="edu-course">Design &amp; Analysis of Algorithms</span><span class="edu-course">Software Engineering</span><span class="edu-course">Finite Automata &amp; Formal Language</span><span class="edu-course">Machine Learning</span><span class="edu-course">Operating Systems</span><span class="edu-course">Communication Networks</span><span class="edu-course">Data Mining</span><span class="edu-course">Software Testing</span><span class="edu-course">Internet of Things</span><span class="edu-course">Object-Oriented System Development</span><span class="edu-course">C &amp; Python Programming</span><span class="edu-course">Biometrics</span>
@@ -474,47 +474,82 @@
     <h2 class="section-title">Technical Skills</h2>
     <div class="skills-tabs">
       <button class="skill-tab active" data-panel="ml">ML / AI</button>
-      <button class="skill-tab" data-panel="llm">LLM & Agentic</button>
-      <button class="skill-tab" data-panel="backend">Backend & APIs</button>
+      <button class="skill-tab" data-panel="llm">LLM &amp; Agentic</button>
+      <button class="skill-tab" data-panel="backend">Backend &amp; APIs</button>
       <button class="skill-tab" data-panel="languages">Languages</button>
-      <button class="skill-tab" data-panel="data">Data & DBs</button>
-      <button class="skill-tab" data-panel="cloud">Cloud & DevOps</button>
+      <button class="skill-tab" data-panel="data">Data &amp; DBs</button>
+      <button class="skill-tab" data-panel="cloud">Cloud &amp; DevOps</button>
     </div>
+
     <div id="panel-ml" class="skill-panel active">
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PyTorch</div><div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>TensorFlow</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Hugging Face</div><div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/openai/412991" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.7);" onerror="this.style.display='none'"/>Whisper</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Scikit-learn</div><div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/opencv/5C3EE8" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>OpenCV</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/keras/D00000" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Keras</div><div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/xgboost/189FDD" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>XGBoost</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PyTorch</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>TensorFlow</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Scikit-learn</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/keras/D00000" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Keras</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Hugging Face</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/opencv/5C3EE8" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>OpenCV</div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>NumPy</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/openai/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Whisper</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/xgboost/189FDD" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>XGBoost</div>
     </div>
+
     <div id="panel-llm" class="skill-panel">
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/openai/412991" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>OpenAI API</div><div class="skill-item">Claude API</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><span style="font-size:18px;flex-shrink:0;">🔗</span>LangChain</div><div class="skill-item">LangGraph</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><span style="font-size:18px;flex-shrink:0;">🔍</span>RAG</div><div class="skill-item">MCP</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><span style="font-size:18px;flex-shrink:0;">🗂️</span>FAISS</div><div class="skill-item">Prompt Engineering</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/openai/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>OpenAI API</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/anthropic/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Claude API</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>LangChain</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>LangGraph</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/meta/0467DF" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Llama</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/pinecone/000000" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>Vector Search</div>
+      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#C8D5A0"/><text x="12" y="16" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1f1a">RAG</text></svg>RAG</div>
+      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#4A90D9"/><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="bold" fill="white">MCP</text></svg>MCP</div>
+      <div class="skill-item"><svg style="width:20px;height:20px;flex-shrink:0;" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#6C63FF"/><text x="12" y="16" text-anchor="middle" font-size="8" font-weight="bold" fill="white">FAISS</text></svg>FAISS</div>
     </div>
+
     <div id="panel-backend" class="skill-panel">
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/fastapi/009688" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>FastAPI</div><div class="skill-item">Flask</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/nodedotjs/339933" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Node.js</div><div class="skill-item">Next.js</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/laravel/FF2D20" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Laravel</div><div class="skill-item">Express.js</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><span style="font-size:18px;flex-shrink:0;">🔌</span>REST APIs</div><div class="skill-item">React</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/fastapi/009688" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>FastAPI</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/flask/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Flask</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/nodedotjs/339933" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Node.js</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Next.js</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/react/61DAFB" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>React</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/express/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Express.js</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/graphql/E10098" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>GraphQL</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/celery/37814A" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Celery</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/sqlalchemy/D71F00" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>SQLAlchemy</div>
     </div>
+
     <div id="panel-languages" class="skill-panel">
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/python/3776AB" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Python</div><div class="skill-item">TypeScript</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>JavaScript</div><div class="skill-item">C / C++</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><span style="font-size:18px;flex-shrink:0;">🗄️</span>SQL</div><div class="skill-item">Java</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/powershell/5391FE" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PowerShell</div><div class="skill-item">PHP</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/python/3776AB" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Python</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/typescript/3178C6" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>TypeScript</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>JavaScript</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/cplusplus/00599C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>C / C++</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/java/007396" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Java</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/postgresql/4169E1" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>SQL</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/php/777BB4" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PHP</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/powershell/5391FE" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PowerShell</div>
     </div>
+
     <div id="panel-data" class="skill-panel">
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/postgresql/4169E1" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PostgreSQL</div><div class="skill-item">pgvector</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/mongodb/47A248" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>MongoDB</div><div class="skill-item">SQLite</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/pandas/150458" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Pandas</div><div class="skill-item">Spark</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/snowflake/29B5E8" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Snowflake</div><div class="skill-item">Supabase</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/postgresql/4169E1" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>PostgreSQL</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/mongodb/47A248" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>MongoDB</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/sqlite/003B57" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>SQLite</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/redis/DC382D" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Redis</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/pandas/150458" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>Pandas</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Spark</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/snowflake/29B5E8" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Snowflake</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/supabase/3ECF8E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Supabase</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/pinecone/000000" style="width:20px;height:20px;flex-shrink:0;filter:invert(0.8);" onerror="this.style.display='none'"/>pgvector</div>
     </div>
+
     <div id="panel-cloud" class="skill-panel">
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/amazonaws/232F3E" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>AWS (EC2, S3, IAM)</div><div class="skill-item">GCP</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/docker/2496ED" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Docker</div><div class="skill-item">Kubernetes</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/redis/DC382D" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Redis</div><div class="skill-item">MLflow</div>
-      <div class="skill-item" style="display:flex;align-items:center;gap:10px;justify-content:flex-start;"><img src="https://cdn.simpleicons.org/githubactions/2088FF" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>CI/CD</div><div class="skill-item">Celery</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>AWS</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>GCP</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/docker/2496ED" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Docker</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Kubernetes</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/githubactions/2088FF" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>CI/CD</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/prometheus/E6522C" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Prometheus</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/grafana/F46800" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Grafana</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/mlflow/0194E2" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>MLflow</div>
+      <div class="skill-item"><img src="https://cdn.simpleicons.org/vercel/ffffff" style="width:20px;height:20px;flex-shrink:0;" onerror="this.style.display='none'"/>Vercel / Render</div>
     </div>
   </div>
 </section>
