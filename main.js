@@ -290,3 +290,20 @@
     requestAnimationFrame(tick);
   })();
 })();
+
+/* copy email */
+(() => {
+  const b = document.getElementById("copyMail"); if (!b) return;
+  b.addEventListener("click", async () => {
+    const t = document.getElementById("copyTag");
+    try { await navigator.clipboard.writeText("aishwaryamy20@gmail.com"); t.textContent = "Copied!"; }
+    catch (e) { location.href = "mailto:aishwaryamy20@gmail.com"; }
+    setTimeout(() => (t.textContent = "Copy"), 1800);
+  });
+})();
+
+/* tap to flip the profile card (touch devices) */
+(() => {
+  const c = document.querySelector(".pcard"); if (!c) return;
+  c.addEventListener("click", (e) => { if (e.target.closest("a")) return; c.classList.toggle("flip"); });
+})();

@@ -24,6 +24,7 @@
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
+  <div class="nav-social"><a href="https://linkedin.com/in/aishwaryamy" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4z"/></svg></a><a href="https://github.com/aishwaryamy" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></div>
 </header>
 
 <main id="top">
@@ -41,10 +42,23 @@
         <a class="btn ghost" href="AishwaryaMY_resume.pdf" target="_blank" rel="noopener">Download resume</a>
       </div>
     </div>
-    <div class="hero-photo rise" style="--d:250ms">
-      <div class="ring"></div>
-      <div class="avatar">
-        <img src="profile.jpg" alt="Aishwarya Mandya Yogananda">
+    <div class="hero-photo rise pcard" style="--d:250ms" tabindex="0" aria-label="Profile card, hover or tap to flip">
+      <div class="pc-inner">
+        <div class="pc-face pc-front">
+          <img src="profile.jpg" alt="Aishwarya Mandya Yogananda">
+          <span class="pc-hint">Hover to flip</span>
+        </div>
+        <div class="pc-face pc-back">
+          <div class="pc-av"><img src="profile.jpg" alt=""></div>
+          <h3>Aishwarya</h3>
+          <p class="pc-handle">@aishwaryamy</p>
+          <p class="pc-quote">Making AI answers you can actually trust, and having fun shipping them.</p>
+          <div class="pc-btns">
+            <a href="https://linkedin.com/in/aishwaryamy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4z"/></svg>LinkedIn</a>
+            <a href="https://github.com/aishwaryamy" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+          </div>
+          <a class="pc-res" href="AishwaryaMY_resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Resume</a>
+        </div>
       </div>
     </div>
   </div>
@@ -197,22 +211,20 @@
 <!-- CONTACT -->
 <section id="contact" class="section">
   <div class="wrap">
-    <h2 class="title reveal">Let's connect</h2>
-    <p class="lede reveal">Hiring for an ML or AI engineering role, or just want to say hello? I'd love to hear from you.</p>
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <a href="mailto:aishwaryamy20@gmail.com"><span>Email</span><b>aishwaryamy20@gmail.com</b></a>
-        <div><span>Location</span><b>New York</b></div>
-        <a href="https://linkedin.com/in/aishwaryamy" target="_blank" rel="noopener"><span>LinkedIn</span><b>linkedin.com/in/aishwaryamy</b></a>
-        <a href="https://github.com/aishwaryamy" target="_blank" rel="noopener"><span>GitHub</span><b>github.com/aishwaryamy</b></a>
+    <div class="touch reveal">
+      <span class="open-now"><i></i>Open to AI / ML Engineer roles</span>
+      <h2>Let's build something<br>worth shipping.</h2>
+      <p>Hiring for an ML or AI engineering role, or have a problem worth solving with LLM agents? My inbox is open.</p>
+      <div class="touch-actions">
+        <a class="btn primary big" href="mailto:aishwaryamy20@gmail.com">Say hello</a>
+        <button class="btn big" id="copyMail" type="button">aishwaryamy20@gmail.com <span id="copyTag">Copy</span></button>
       </div>
-      <form class="contact-form reveal" id="contactForm">
-        <label>Your name<input name="name" required></label>
-        <label>Your email<input name="email" type="email" required></label>
-        <label>Message<textarea name="message" rows="5" required></textarea></label>
-        <button class="btn primary" type="submit">Send message</button>
-        <small>Opens your email app with the message filled in.</small>
-      </form>
+      <div class="touch-links">
+        <a href="https://linkedin.com/in/aishwaryamy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4z"/></svg>LinkedIn</a>
+        <a href="https://github.com/aishwaryamy" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+        <a href="AishwaryaMY_resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Resume</a>
+        <span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>New York, NY</span>
+      </div>
     </div>
   </div>
 </section>
