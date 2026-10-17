@@ -33,8 +33,89 @@
     }
   }
 
+  // ---- Projects: cards + detail pop-up ----------------------------------
+  // To use a real screenshot instead of an illustration, drop it in img/ and
+  // change the `img` value below (for example "img/rentguard.png").
+  const PROJECTS = [
+    { id: "rentguard", big: true, badge: "NYC · Public data", title: "RentGuard", img: "img/rentguard.svg",
+      blurb: "Type any NYC address and see that building's live HPD violations and 311 complaints in plain English, with answers grounded only in the building's own records.",
+      tags: ["Python", "Streamlit", "OpenAI", "NYC Open Data", "Guardrails"],
+      sections: [
+        ["The problem", "Renters can't easily see a building's history before signing a lease. The data exists, but it is scattered across city systems and written for agencies, not tenants."],
+        ["What it does", ["Resolves any NYC address to its building (BBL) with NYC Planning Labs Geosearch.", "Pulls live HPD violations and 311 complaints from NYC Open Data and explains them in plain English.", "Lets you ask questions answered only from that building's records, with citations.", "Declines legal conclusions and never calls a building safe."]],
+        ["The bug I'm proudest of finding", "While testing, a Jersey City address resolved to a Brooklyn building, because NYC's geocoder always returns its closest guess. I built a verification layer that refuses out-of-NYC input and checks house number, street, borough and ZIP before showing any report. It is covered by 32 offline tests, and I wrote it up in the README."]],
+      links: [["Live demo", "https://rentguard-fwpwhgu6y7iwhzbozcefml.streamlit.app/", true], ["View code", "https://github.com/aishwaryamy/RentGuard"]] },
+    { id: "enrichment", big: true, badge: "Agentic AI · B2B", title: "AI Contact Enrichment Agent", img: "img/contact-enrichment.svg",
+      blurb: "A conversational agent that turns any B2B prospect into a research brief in about 45 seconds: live company intel, buying signals, ICP scoring and a personalized outreach draft.",
+      tags: ["Next.js", "TypeScript", "GPT-4o", "Supabase", "Vercel"],
+      sections: [
+        ["The problem", "Researching a prospect before outreach is slow and repetitive: company news, hiring and funding signals, fit with the ideal customer profile, then writing something personal."],
+        ["What it does", ["Chat with the agent about any prospect or company.", "Gathers live company intelligence and buying signals.", "Scores the prospect against an ideal customer profile (ICP).", "Drafts personalized outreach with GPT-4o, in about 45 seconds end to end."]]],
+      links: [["View code", "https://github.com/aishwaryamy/ai-enrichment-agent"]] },
+    { id: "nexthire", badge: "Job search · Agentic", title: "NextHire AI", img: "img/nexthire.svg",
+      blurb: "An AI job-search copilot with a Kanban tracker, resume and cover letter tailoring, contact finding and STAR-scored interview prep.",
+      tags: ["FastAPI", "React", "LangGraph", "GPT-4o", "Docker"],
+      sections: [["What it does", ["Tracks applications on a Kanban board.", "Tailors your resume and writes cover letters for each role.", "Finds contacts to reach out to.", "Runs mock interviews and scores answers with the STAR method."]]],
+      links: [["Live demo", "https://nexthire-46nl.onrender.com", true], ["View code", "https://github.com/aishwaryamy/nexthire"]] },
+    { id: "incident", badge: "Agents · RAG", title: "AI Incident Response Agent", img: "img/incident-response.svg",
+      blurb: "A LangGraph and RAG pipeline that helps investigate engineering incidents, with caching, retrieval, authentication and observability built in.",
+      tags: ["LangGraph", "RAG", "FastAPI", "pgvector", "Redis", "Docker"],
+      sections: [["What it does", ["Investigates incidents with a LangGraph agent over retrieved runbooks and history.", "pgvector retrieval with Redis caching for fast repeat lookups.", "JWT authentication and observability for production use."]]],
+      links: [["View code", "https://github.com/aishwaryamy/AI-Incident-Response-Agent"]] },
+    { id: "audit", badge: "RAG · Evaluation", title: "Audit Readiness AI", img: "img/audit-readiness.svg",
+      blurb: "A RAG compliance assistant over SOC 2 documents that compares retrieval methods, with a reported 60% reduction in audit effort.",
+      tags: ["LangChain", "RAG", "OpenAI API", "FastAPI", "Docker"],
+      sections: [["What it does", ["Answers audit-readiness questions from SOC 2 documents.", "Compares retrieval approaches so the best one is chosen by measurement, not guesswork.", "Reported 60% reduction in audit effort."]]],
+      links: [["View code", "https://github.com/aishwaryamy/auditreadinessai"]] },
+    { id: "quantamind", badge: "Fine-tuning · Legal AI", title: "Quantamind Legal AI Agent", img: "img/quantamind.svg",
+      blurb: "An offline agent for legal contract analysis. LoRA fine-tuning reached 92.5% accuracy versus 85.3% for prompt engineering on the CUAD benchmark.",
+      tags: ["Mistral 7B", "LoRA", "FAISS", "RAG", "Docker"],
+      sections: [["What it does", ["Analyzes contracts fully offline using Mistral 7B, FAISS and RAG.", "Benchmarks LoRA fine-tuning (92.5%) against few-shot prompt engineering (85.3%) on the CUAD dataset."]]],
+      links: [["View code", "https://github.com/aishwaryamy/quantamind-legal-ai-agent"]] },
+    { id: "opspilot", badge: "AI SaaS · Full-stack", title: "OpsPilot", img: "img/opspilot.svg",
+      blurb: "A full-stack AI agent SaaS with chat and tool calling, document ingestion, vector retrieval, user memory and a multi-panel interface.",
+      tags: ["Next.js", "FastAPI", "pgvector", "Redis", "OpenAI"],
+      sections: [["What it does", ["Chat with tool calling to run tasks.", "Document ingestion with vector retrieval.", "Per-user memory and a multi-panel UI."]]],
+      links: [["View code", "https://github.com/aishwaryamy/opspilot"]] },
+    { id: "gtm", badge: "Sales · Automation", title: "AI GTM Copilot", img: "img/gtm-copilot.svg",
+      blurb: "An LLM assistant that automates lead qualification, account research and outreach for 1K+ leads per day through MCP workflows.",
+      tags: ["OpenAI API", "MCP", "Streamlit", "SQLite", "Pandas"],
+      sections: [["What it does", ["Qualifies leads and researches accounts automatically.", "Generates outreach, handling 1K+ leads per day.", "Uses MCP-based workflows to connect tools."]]],
+      links: [["Live demo", "https://ai-gtm-copilot.streamlit.app/", true], ["View code", "https://github.com/aishwaryamy/ai-gtm-copilot"]] },
+  ];
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const featuredEl = $("#featured"), gridEl = $("#projGrid");
+  PROJECTS.forEach((p) => {
+    const a = document.createElement("article");
+    a.className = "proj reveal" + (p.big ? " big" : "");
+    a.tabIndex = 0; a.setAttribute("role", "button"); a.dataset.p = p.id;
+    a.setAttribute("aria-label", "Open details for " + p.title);
+    a.innerHTML = `<div class="shot"><img src="${p.img}" alt="" loading="lazy"></div><div class="pb"><span class="badge">${esc(p.badge)}</span><h3>${esc(p.title)}</h3><p>${esc(p.blurb)}</p><div class="tags">${p.tags.slice(0, 4).map((t) => `<i>${esc(t)}</i>`).join("")}</div><span class="open">View details</span></div>`;
+    (p.big ? featuredEl : gridEl).appendChild(a);
+  });
+  const modal = $("#modal");
+  let lastFocus = null;
+  function openProject(id) {
+    const p = PROJECTS.find((x) => x.id === id); if (!p) return;
+    lastFocus = document.activeElement;
+    $("#mImg").src = p.img; $("#mBadge").textContent = p.badge; $("#mTitle").textContent = p.title; $("#mLead").textContent = p.blurb;
+    $("#mSections").innerHTML = p.sections.map(([h, b]) => `<div class="m-sec"><h4>${esc(h)}</h4>${Array.isArray(b) ? "<ul>" + b.map((x) => `<li>${esc(x)}</li>`).join("") + "</ul>" : `<p>${esc(b)}</p>`}</div>`).join("");
+    $("#mTags").innerHTML = p.tags.map((t) => `<i>${esc(t)}</i>`).join("");
+    $("#mLinks").innerHTML = p.links.map(([l, u, primary]) => `<a class="btn sm${primary ? " primary" : ""}" href="${u}" target="_blank" rel="noopener">${esc(l)}</a>`).join("");
+    modal.hidden = false; document.body.classList.add("lock"); $(".modal-x").focus();
+  }
+  function closeModal() { modal.hidden = true; document.body.classList.remove("lock"); if (lastFocus) lastFocus.focus(); }
+  document.addEventListener("click", (e) => {
+    const card = e.target.closest(".proj"); if (card) openProject(card.dataset.p);
+    if (e.target.closest("[data-close]")) closeModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.hidden) closeModal();
+    if ((e.key === "Enter" || e.key === " ") && e.target.matches(".proj")) { e.preventDefault(); openProject(e.target.dataset.p); }
+  });
+
   // ---- Reveal on scroll -------------------------------------------------
-  $$(".stats,.skill-grid,.proj-grid,.facts,.papers,.edu-grid").forEach((g) =>
+  $$(".stats,.skill-grid,.proj-grid,.feature-row,.facts,.papers,.edu-grid").forEach((g) =>
     [...g.children].forEach((el, i) => el.style.setProperty("--d", i * 80 + "ms")));
   const io = new IntersectionObserver((es) => es.forEach((e) => {
     if (e.isIntersecting) {

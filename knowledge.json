@@ -19,7 +19,7 @@
    "project",
    "projects"
   ],
-  "text": "Her strongest project is RentGuard, a live NYC apartment-safety app. Type any NYC address and it pulls that building's real HPD violations and 311 complaints, explains them in plain English, and answers questions only from those records, with citations. It declines legal conclusions and never calls a building safe. While testing, she found that a Jersey City address resolved to a Brooklyn building, because NYC's geocoder always returns its closest guess. She fixed it with a verification layer that checks house number, street, borough and ZIP, backed by 32 offline tests. Live demo: https://rentguard-fwpwhgu6y7iwhzbozcefml.streamlit.app/"
+  "text": "Her strongest project is RentGuard, a live NYC apartment-safety app. Type any NYC address and it pulls that building's real HPD violations and 311 complaints, explains them in plain English, and answers questions only from those records, with citations. It declines legal conclusions and never calls a building safe. While testing, she found that a Jersey City address resolved to a Brooklyn building, because NYC's geocoder always returns its closest guess. She fixed it with a verification layer that checks house number, street, borough and ZIP, backed by 32 offline tests. Live demo: https://rentguard-fwpwhgu6y7iwhzbozcefml.streamlit.app/ Her other flagship is the AI Contact Enrichment Agent, which turns any B2B prospect into a research brief with outreach in about 45 seconds."
  },
  {
   "id": "projects-overview",
@@ -37,7 +37,7 @@
    "list",
    "show"
   ],
-  "text": "Her featured projects are RentGuard (NYC building-safety app, live), NextHire AI (job-search copilot, live), the AI Incident Response Agent (LangGraph and RAG), Audit Readiness AI (SOC 2 RAG assistant), Quantamind Legal AI (LoRA fine-tuning on CUAD, 92.5 percent accuracy) and OpsPilot (full-stack agent SaaS). Ask about any of them by name, or ask which one is her strongest."
+  "text": "Her featured projects are RentGuard (NYC building-safety app, live) and the AI Contact Enrichment Agent, plus NextHire AI (job-search copilot), the AI Incident Response Agent (LangGraph and RAG), Audit Readiness AI (SOC 2 RAG assistant), Quantamind Legal AI (LoRA fine-tuning on CUAD), OpsPilot (full-stack agent SaaS) and the AI GTM Copilot. Ask about any of them by name, or ask which one is her strongest."
  },
  {
   "id": "about",
@@ -77,19 +77,30 @@
   "id": "education",
   "title": "Education",
   "tags": [
-   "education",
-   "degree",
-   "university",
-   "school",
-   "study",
-   "studied",
-   "masters",
-   "college",
+   "bachelor",
+   "bachelors",
    "binghamton",
-   "vtu",
-   "graduate"
+   "classes",
+   "college",
+   "course",
+   "courses",
+   "coursework",
+   "curriculum",
+   "degree",
+   "education",
+   "graduate",
+   "master",
+   "masters",
+   "program",
+   "school",
+   "studied",
+   "study",
+   "undergrad",
+   "undergraduate",
+   "university",
+   "vtu"
   ],
-  "text": "She is finishing an M.S. in Computer Science at Binghamton University, State University of New York (Aug 2024 to May 2026), and has a B.E. from VTU in India."
+  "text": "Master's: M.S. in Computer Science at Binghamton University, State University of New York (Aug 2024 to May 2026). Courses include Programming Languages, Design & Analysis of Algorithms, Programming Systems & Tools, Systems Programming, Cyber Security, Software Engineering & Project Management, Applied Cybersecurity Topics, Design Patterns, Intro to Cloud Computing, Independent Study and CS Professional Development.\n\nUndergraduate: B.E. in Information Science & Engineering at Visvesvaraya Technological University, Bengaluru (Sep 2020 to May 2024). Courses include Data Structures & Algorithms, Discrete Mathematics, Computer Organization & Architecture, OOPs with Java, Database Management Systems, Software Engineering, Machine Learning, Operating Systems, Communication Networks, Data Mining, Software Testing, Internet of Things and Biometrics."
  },
  {
   "id": "exp-manifoldz",
@@ -147,7 +158,7 @@
    "data",
    "science"
   ],
-  "text": "Earlier roles include Cyber Security Intern at Nihon Communications Solutions (Jan to Mar 2024), where she built a threat simulation platform covering six attack vectors and cut audit cycle time from 5 days to 2; Full Stack Engineer at RunShaw Technologies (Jul to Oct 2023), building a sports and events platform for about 10,000 employees with 85%+ Jest coverage; Machine Learning Intern at Campalin Innovations (Apr to May 2023), improving classification accuracy by 20 percent; and Data Science Intern at BrainOVision Solutions (Apr to May 2022), cutting manual analysis time by 50 percent."
+  "text": "Earlier roles: Cyber Security Intern at Nihon Communications Solutions, Bengaluru (Jan to Mar 2024), who built a threat simulation platform covering 6 attack vectors and cut audit cycle time from 5 days to 2; Full Stack Engineer intern at RunShaw Technologies (Jul to Oct 2023), building a sports and events platform for about 10,000 employees with 85%+ Jest coverage; Machine Learning Intern at Campalin Innovations (Apr to May 2023), improving classification accuracy by 20 percent; and Data Science Intern at BrainOVision Solutions (Apr to May 2022), improving system performance by 30 percent and cutting manual analysis time by 50 percent."
  },
  {
   "id": "skills-llm",
@@ -346,13 +357,9 @@
    "leads",
    "lead",
    "outreach",
-   "enrichment",
-   "contact",
-   "prospects",
-   "mcp",
-   "b2b"
+   "mcp"
   ],
-  "text": "AI GTM Copilot is an LLM assistant for lead qualification, account research and outreach, handling 1K+ leads per day via MCP workflows (OpenAI API, MCP, Streamlit, SQLite, Pandas). The AI Contact Enrichment Agent enriches B2B prospects in about 45 seconds with company intel, buying signals, ICP scoring and outreach drafts (Next.js, TypeScript, GPT-4o, Supabase, Vercel)."
+  "text": "AI GTM Copilot is an LLM assistant that automates lead qualification, account research and outreach generation for 1K+ leads per day using MCP-based workflows (OpenAI API, MCP, Streamlit, SQLite, Pandas)."
  },
  {
   "id": "p-other",
@@ -430,5 +437,30 @@
    "reliable"
   ],
   "text": "A consistent thread in her work is making AI systems trustworthy: grounding answers in source records, adding guardrails, and measuring quality with real evaluation. Examples include RentGuard's address verification and 32 offline tests, retrieval metrics on Audit Readiness AI, and the LoRA versus prompting comparison in Quantamind."
+ },
+ {
+  "id": "p-enrich",
+  "title": "AI Contact Enrichment Agent",
+  "tags": [
+   "enrichment",
+   "contact",
+   "contacts",
+   "agent",
+   "b2b",
+   "prospect",
+   "prospects",
+   "icp",
+   "outreach",
+   "signals",
+   "buying",
+   "gpt-4o",
+   "supabase",
+   "vercel",
+   "main",
+   "flagship",
+   "featured",
+   "project"
+  ],
+  "text": "The AI Contact Enrichment Agent is a conversational agent that enriches any B2B prospect in about 45 seconds with live company intelligence, buying signals, ICP scoring and a personalized outreach draft. Built with Next.js, TypeScript, GPT-4o, Supabase and Vercel. Code: https://github.com/aishwaryamy/ai-enrichment-agent"
  }
 ]
