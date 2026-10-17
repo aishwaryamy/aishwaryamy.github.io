@@ -201,3 +201,5 @@ body.lock{overflow:hidden}
 .pl.gh{width:34px;height:34px;border:1px solid var(--line);color:var(--ink,#1f2937);background:#fff}.pl.gh:hover{border-color:var(--a);color:var(--a-d)}
 
 
+
+.comets{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:-1}
