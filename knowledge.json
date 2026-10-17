@@ -1,0 +1,434 @@
+[
+ {
+  "id": "best-project",
+  "title": "Strongest project",
+  "tags": [
+   "strongest",
+   "best",
+   "flagship",
+   "top",
+   "favorite",
+   "favourite",
+   "proudest",
+   "impressive",
+   "standout",
+   "featured",
+   "highlight",
+   "main",
+   "greatest",
+   "project",
+   "projects"
+  ],
+  "text": "Her strongest project is RentGuard, a live NYC apartment-safety app. Type any NYC address and it pulls that building's real HPD violations and 311 complaints, explains them in plain English, and answers questions only from those records, with citations. It declines legal conclusions and never calls a building safe. While testing, she found that a Jersey City address resolved to a Brooklyn building, because NYC's geocoder always returns its closest guess. She fixed it with a verification layer that checks house number, street, borough and ZIP, backed by 32 offline tests. Live demo: https://rentguard-fwpwhgu6y7iwhzbozcefml.streamlit.app/"
+ },
+ {
+  "id": "projects-overview",
+  "title": "Projects overview",
+  "tags": [
+   "projects",
+   "project",
+   "built",
+   "build",
+   "portfolio",
+   "work",
+   "made",
+   "created",
+   "examples",
+   "list",
+   "show"
+  ],
+  "text": "Her featured projects are RentGuard (NYC building-safety app, live), NextHire AI (job-search copilot, live), the AI Incident Response Agent (LangGraph and RAG), Audit Readiness AI (SOC 2 RAG assistant), Quantamind Legal AI (LoRA fine-tuning on CUAD, 92.5 percent accuracy) and OpsPilot (full-stack agent SaaS). Ask about any of them by name, or ask which one is her strongest."
+ },
+ {
+  "id": "about",
+  "title": "Who she is",
+  "tags": [
+   "who",
+   "about",
+   "introduce",
+   "yourself",
+   "background",
+   "summary",
+   "aishwarya",
+   "tell"
+  ],
+  "text": "Aishwarya Mandya Yogananda is a Machine Learning Engineer based in New York, currently at Manifoldz. She builds production ML systems, from transformer fine-tuning to LLM-powered pipelines, with a focus on applied ML, RAG and backend engineering. She values systems that keep working beyond a notebook."
+ },
+ {
+  "id": "roles",
+  "title": "What she is looking for",
+  "tags": [
+   "hire",
+   "hiring",
+   "open",
+   "looking",
+   "roles",
+   "role",
+   "job",
+   "opportunity",
+   "available",
+   "availability",
+   "work",
+   "seeking"
+  ],
+  "text": "She is open to Machine Learning Engineer, AI Engineer and Applied ML roles, and is based in New York. For details like timing or work authorization, please email her directly."
+ },
+ {
+  "id": "education",
+  "title": "Education",
+  "tags": [
+   "education",
+   "degree",
+   "university",
+   "school",
+   "study",
+   "studied",
+   "masters",
+   "college",
+   "binghamton",
+   "vtu",
+   "graduate"
+  ],
+  "text": "She is finishing an M.S. in Computer Science at Binghamton University, State University of New York (Aug 2024 to May 2026), and has a B.E. from VTU in India."
+ },
+ {
+  "id": "exp-manifoldz",
+  "title": "Manifoldz (current)",
+  "tags": [
+   "manifoldz",
+   "current",
+   "currently",
+   "now",
+   "experience",
+   "job",
+   "company",
+   "msc",
+   "onboarding",
+   "qa",
+   "defects",
+   "maritime"
+  ],
+  "text": "At Manifoldz (May 2026 to present) she is a Machine Learning Software Engineer. She documented the MSCTransToReportTool codebase, cutting iOS onboarding time by 40 percent, and logged 15+ defects while leading a QA/QC review that produced a 5-step roadmap to reduce rework risk by 30 percent. Earlier, as an intern there (Sep 2025 to Apr 2026), she cut ASR errors by 43.3 percent by fine-tuning Whisper, reduced routing latency by 30 percent with real-time weather ingestion, improved model accuracy by 18 percent and alert reliability by 20 percent, and delivered a backend serving 1K+ requests per day for a marine operations app."
+ },
+ {
+  "id": "exp-research",
+  "title": "Research assistant",
+  "tags": [
+   "research",
+   "assistant",
+   "binghamton",
+   "mitre",
+   "ectf",
+   "satellite",
+   "security",
+   "pipeline",
+   "fpga"
+  ],
+  "text": "As a Research Assistant at Binghamton University (Jan to Apr 2025) she built a secure satellite TV pipeline for the MITRE eCTF competition, with 99.9 percent frame delivery across 200+ adversarial tests, cut latency by 40 percent and kept 95 percent uptime."
+ },
+ {
+  "id": "exp-earlier",
+  "title": "Earlier roles",
+  "tags": [
+   "earlier",
+   "previous",
+   "past",
+   "internship",
+   "internships",
+   "intern",
+   "cyber",
+   "nihon",
+   "runshaw",
+   "campalin",
+   "brainovision",
+   "fullstack",
+   "full",
+   "stack",
+   "data",
+   "science"
+  ],
+  "text": "Earlier roles include Cyber Security Intern at Nihon Communications Solutions (Jan to Mar 2024), where she built a threat simulation platform covering six attack vectors and cut audit cycle time from 5 days to 2; Full Stack Engineer at RunShaw Technologies (Jul to Oct 2023), building a sports and events platform for about 10,000 employees with 85%+ Jest coverage; Machine Learning Intern at Campalin Innovations (Apr to May 2023), improving classification accuracy by 20 percent; and Data Science Intern at BrainOVision Solutions (Apr to May 2022), cutting manual analysis time by 50 percent."
+ },
+ {
+  "id": "skills-llm",
+  "title": "LLM and agentic AI",
+  "tags": [
+   "llm",
+   "agent",
+   "agents",
+   "agentic",
+   "rag",
+   "langgraph",
+   "langchain",
+   "openai",
+   "claude",
+   "prompt",
+   "vector",
+   "retrieval",
+   "guardrails",
+   "genai",
+   "generative"
+  ],
+  "text": "Her LLM and agentic AI work covers RAG pipelines, LangGraph agents, the OpenAI and Claude APIs, prompt engineering, vector search and guardrails. RentGuard and the AI Incident Response Agent are the clearest examples."
+ },
+ {
+  "id": "skills-ml",
+  "title": "ML model development",
+  "tags": [
+   "ml",
+   "machine",
+   "learning",
+   "model",
+   "models",
+   "fine-tuning",
+   "finetuning",
+   "lora",
+   "transformers",
+   "pytorch",
+   "xgboost",
+   "scikit",
+   "evaluation",
+   "whisper",
+   "huggingface"
+  ],
+  "text": "For ML model development she works with transformer fine-tuning, XGBoost, Scikit-learn and PyTorch, plus model evaluation and deployment. Examples: LoRA fine-tuning reached 92.5 percent accuracy versus 85.3 percent for few-shot prompting on the CUAD benchmark, and Whisper fine-tuning cut ASR errors by 43.3 percent."
+ },
+ {
+  "id": "skills-backend",
+  "title": "Backend, cloud and MLOps",
+  "tags": [
+   "backend",
+   "api",
+   "fastapi",
+   "node",
+   "docker",
+   "kubernetes",
+   "aws",
+   "gcp",
+   "cloud",
+   "mlops",
+   "mlflow",
+   "redis",
+   "postgres",
+   "postgresql",
+   "cicd",
+   "devops",
+   "infrastructure"
+  ],
+  "text": "On the backend she uses FastAPI, Node.js, REST and GraphQL, Celery, Redis, PostgreSQL and Docker microservices. On the cloud and MLOps side she works with AWS, GCP, Docker, Kubernetes, MLflow and CI/CD."
+ },
+ {
+  "id": "skills-lang",
+  "title": "Languages and tools",
+  "tags": [
+   "languages",
+   "language",
+   "programming",
+   "python",
+   "javascript",
+   "typescript",
+   "java",
+   "sql",
+   "tools",
+   "stack",
+   "tech",
+   "technologies",
+   "skills"
+  ],
+  "text": "Languages include Python, C, C++, Java, JavaScript, TypeScript and SQL. She also works with Pandas, NumPy, Hugging Face, Whisper, LangChain, LangGraph, FastAPI, Flask, React and Next.js, and databases such as PostgreSQL, MySQL, SQLite, MongoDB and Supabase."
+ },
+ {
+  "id": "rentguard",
+  "title": "RentGuard",
+  "tags": [
+   "rentguard",
+   "apartment",
+   "nyc",
+   "building",
+   "violations",
+   "311",
+   "hpd",
+   "renters",
+   "flagship",
+   "latest",
+   "recent",
+   "jersey",
+   "verification",
+   "bug",
+   "geocoder"
+  ],
+  "text": "RentGuard is her NYC apartment-safety product. Type any NYC address and it pulls that building's live HPD violations and 311 complaints from NYC Open Data, explains them in plain English, and lets you ask questions answered only from that building's records, with citations. It declines legal conclusions and never calls a building safe. A notable bug she found while testing: a Jersey City address resolved to a Brooklyn building because NYC's geocoder always returns its closest guess. She fixed it with a verification layer that refuses out-of-NYC input and checks house number, street, borough and ZIP, backed by 32 offline tests. Built with Python, Streamlit, OpenAI gpt-4o-mini, NYC Open Data and NYC Planning Labs Geosearch."
+ },
+ {
+  "id": "p-nexthire",
+  "title": "NextHire AI",
+  "tags": [
+   "nexthire",
+   "job",
+   "search",
+   "copilot",
+   "kanban",
+   "cover",
+   "letter",
+   "resume",
+   "interview",
+   "star"
+  ],
+  "text": "NextHire AI is a live AI job-search copilot with a Kanban tracker, cover letter and resume tailoring, contact finding and STAR-scored interview prep. Built with FastAPI, React, LangGraph, GPT-4o and Docker."
+ },
+ {
+  "id": "p-incident",
+  "title": "AI Incident Response Agent",
+  "tags": [
+   "incident",
+   "response",
+   "investigation",
+   "pgvector",
+   "observability",
+   "jwt",
+   "prometheus",
+   "grafana"
+  ],
+  "text": "The AI Incident Response Agent is a LangGraph and RAG pipeline for investigating engineering incidents, with Redis caching, pgvector retrieval, JWT auth and observability. Built with LangGraph, RAG, FastAPI, pgvector, Redis and Docker."
+ },
+ {
+  "id": "p-audit",
+  "title": "Audit Readiness AI",
+  "tags": [
+   "audit",
+   "readiness",
+   "compliance",
+   "soc",
+   "soc2",
+   "precision",
+   "recall",
+   "mrr"
+  ],
+  "text": "Audit Readiness AI is a RAG-based compliance assistant over SOC 2 documents that compares retrieval methods, with a reported 60 percent reduction in audit effort. Built with LangChain, RAG, the OpenAI API, FastAPI and Docker."
+ },
+ {
+  "id": "p-quantamind",
+  "title": "Quantamind Legal AI Agent",
+  "tags": [
+   "quantamind",
+   "legal",
+   "contract",
+   "contracts",
+   "cuad",
+   "mistral",
+   "lora",
+   "faiss",
+   "offline"
+  ],
+  "text": "Quantamind is an offline contract-analysis agent using Mistral 7B, FAISS and RAG. She compared LoRA fine-tuning (92.5 percent accuracy) against prompt engineering (85.3 percent) on the CUAD benchmark."
+ },
+ {
+  "id": "p-opspilot",
+  "title": "OpsPilot",
+  "tags": [
+   "opspilot",
+   "saas",
+   "tool",
+   "calling",
+   "memory",
+   "chat",
+   "nextjs"
+  ],
+  "text": "OpsPilot is a full-stack AI agent SaaS with chat, tool calling, document ingestion, vector retrieval and user memory. Built with Next.js, FastAPI, pgvector, Redis and OpenAI."
+ },
+ {
+  "id": "p-gtm",
+  "title": "AI GTM Copilot and Contact Enrichment",
+  "tags": [
+   "gtm",
+   "copilot",
+   "sales",
+   "leads",
+   "lead",
+   "outreach",
+   "enrichment",
+   "contact",
+   "prospects",
+   "mcp",
+   "b2b"
+  ],
+  "text": "AI GTM Copilot is an LLM assistant for lead qualification, account research and outreach, handling 1K+ leads per day via MCP workflows (OpenAI API, MCP, Streamlit, SQLite, Pandas). The AI Contact Enrichment Agent enriches B2B prospects in about 45 seconds with company intel, buying signals, ICP scoring and outreach drafts (Next.js, TypeScript, GPT-4o, Supabase, Vercel)."
+ },
+ {
+  "id": "p-other",
+  "title": "Other projects",
+  "tags": [
+   "flight",
+   "tracker",
+   "clarify",
+   "churn",
+   "fishing",
+   "asr",
+   "marine",
+   "task",
+   "manager",
+   "adni",
+   "brain",
+   "imaging",
+   "finance",
+   "app",
+   "others",
+   "additional",
+   "others",
+   "additional"
+  ],
+  "text": "Beyond her featured work, beyond her featured work, other projects include a Flight Price Tracker (XGBoost and anomaly detection on Amadeus prices), ClariFy (a React Native app that computes a daily safe-to-spend amount), Marine ASR Fine-tuning (Whisper, 43.3 percent lower error rate), a Fishing Mitigation MVP (real-time NWS weather ingestion with LLM route optimization, 30 percent lower latency), Customer Churn Prediction (eight classifiers benchmarked), a Task Manager app, and ADNI brain-imaging analysis."
+ },
+ {
+  "id": "papers",
+  "title": "Research papers",
+  "tags": [
+   "research",
+   "paper",
+   "papers",
+   "publication",
+   "publications",
+   "published",
+   "handwritten",
+   "drift",
+   "language",
+   "identification"
+  ],
+  "text": "She has two 2023 papers: Language Identification from Trilingual Handwritten Documents using Discriminating Features, and Concept Drift Detection Approach towards Imbalanced Data Stream."
+ },
+ {
+  "id": "contact",
+  "title": "Contact",
+  "tags": [
+   "contact",
+   "email",
+   "reach",
+   "linkedin",
+   "github",
+   "resume",
+   "cv",
+   "connect",
+   "talk",
+   "chat",
+   "hire"
+  ],
+  "text": "You can reach Aishwarya by email at aishwaryamy20@gmail.com, on LinkedIn at linkedin.com/in/aishwaryamy, or on GitHub at github.com/aishwaryamy. Her resume is available from the Resume link on this site."
+ },
+ {
+  "id": "strengths",
+  "title": "What sets her work apart",
+  "tags": [
+   "strengths",
+   "strength",
+   "why",
+   "different",
+   "unique",
+   "standout",
+   "evaluation",
+   "eval",
+   "trust",
+   "reliable"
+  ],
+  "text": "A consistent thread in her work is making AI systems trustworthy: grounding answers in source records, adding guardrails, and measuring quality with real evaluation. Examples include RentGuard's address verification and 32 offline tests, retrieval metrics on Audit Readiness AI, and the LoRA versus prompting comparison in Quantamind."
+ }
+]
