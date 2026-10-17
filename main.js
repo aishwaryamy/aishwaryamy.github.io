@@ -51,7 +51,7 @@
       sections: [
         ["The problem", "Researching a prospect before outreach is slow and repetitive: company news, hiring and funding signals, fit with the ideal customer profile, then writing something personal."],
         ["What it does", ["Chat with the agent about any prospect or company.", "Gathers live company intelligence and buying signals.", "Scores the prospect against an ideal customer profile (ICP).", "Drafts personalized outreach with GPT-4o, in about 45 seconds end to end."]]],
-      links: [["View code", "https://github.com/aishwaryamy/ai-enrichment-agent"]] },
+      links: [["Live demo", "https://ai-enrichment-agent.vercel.app/", true], ["View code", "https://github.com/aishwaryamy/ai-enrichment-agent"]] },
     { id: "nexthire", badge: "Job search · Agentic", title: "NextHire AI", img: "img/nexthire.svg",
       blurb: "An AI job-search copilot with a Kanban tracker, resume and cover letter tailoring, contact finding and STAR-scored interview prep.",
       tags: ["FastAPI", "React", "LangGraph", "GPT-4o", "Docker"],

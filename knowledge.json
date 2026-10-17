@@ -461,6 +461,6 @@
    "featured",
    "project"
   ],
-  "text": "The AI Contact Enrichment Agent is a conversational agent that enriches any B2B prospect in about 45 seconds with live company intelligence, buying signals, ICP scoring and a personalized outreach draft. Built with Next.js, TypeScript, GPT-4o, Supabase and Vercel. Code: https://github.com/aishwaryamy/ai-enrichment-agent"
+  "text": "The AI Contact Enrichment Agent is a conversational agent that enriches any B2B prospect in about 45 seconds with live company intelligence, buying signals, ICP scoring and a personalized outreach draft. Built with Next.js, TypeScript, GPT-4o, Supabase and Vercel. Live demo: https://ai-enrichment-agent.vercel.app/ Code: https://github.com/aishwaryamy/ai-enrichment-agent"
  }
 ]
