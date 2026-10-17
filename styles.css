@@ -199,3 +199,5 @@ body.lock{overflow:hidden}
 .pl{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:600;font-size:.82rem;transition:.2s}
 .pl.live{background:var(--a);color:#fff;padding:6px 14px}.pl.live:hover{background:var(--a-d)}
 .pl.gh{width:34px;height:34px;border:1px solid var(--line);color:var(--ink,#1f2937);background:#fff}.pl.gh:hover{border-color:var(--a);color:var(--a-d)}
+
+
