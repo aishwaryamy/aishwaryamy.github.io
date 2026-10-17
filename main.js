@@ -281,10 +281,10 @@
       if (c.y - c.len * dy > H || c.x - c.len * dx > W + 100) Object.assign(c, make(false));
       const tx = c.x - dx * c.len, ty = c.y - dy * c.len;
       const g = ctx.createLinearGradient(tx, ty, c.x, c.y);
-      g.addColorStop(0, "rgba(13,148,136,0)"); g.addColorStop(1, "rgba(13,148,136," + c.a + ")");
+      g.addColorStop(0, "rgba(79,70,229,0)"); g.addColorStop(1, "rgba(79,70,229," + c.a + ")");
       ctx.strokeStyle = g; ctx.lineWidth = 1.6; ctx.lineCap = "round";
       ctx.beginPath(); ctx.moveTo(tx, ty); ctx.lineTo(c.x, c.y); ctx.stroke();
-      ctx.fillStyle = "rgba(13,148,136," + Math.min(c.a + 0.2, 0.7) + ")";
+      ctx.fillStyle = "rgba(79,70,229," + Math.min(c.a + 0.2, 0.7) + ")";
       ctx.beginPath(); ctx.arc(c.x, c.y, 1.8, 0, 6.283); ctx.fill();
     }
     requestAnimationFrame(tick);
