@@ -37,7 +37,7 @@
   // To use a real screenshot instead of an illustration, drop it in img/ and
   // change the `img` value below (for example "img/rentguard.png").
   const PROJECTS = [
-    { id: "rentguard", big: true, badge: "NYC · Public data", title: "RentGuard", img: "img/rentguard.svg",
+    { id: "rentguard", big: true, badge: "NYC · Public data", title: "RentGuard", img: "img/rentguard.jpg",
       blurb: "Type any NYC address and see that building's live HPD violations and 311 complaints in plain English, with answers grounded only in the building's own records.",
       tags: ["Python", "Streamlit", "OpenAI", "NYC Open Data", "Guardrails"],
       sections: [
@@ -45,7 +45,7 @@
         ["What it does", ["Resolves any NYC address to its building (BBL) with NYC Planning Labs Geosearch.", "Pulls live HPD violations and 311 complaints from NYC Open Data and explains them in plain English.", "Lets you ask questions answered only from that building's records, with citations.", "Declines legal conclusions and never calls a building safe."]],
         ["The bug I'm proudest of finding", "While testing, a Jersey City address resolved to a Brooklyn building, because NYC's geocoder always returns its closest guess. I built a verification layer that refuses out-of-NYC input and checks house number, street, borough and ZIP before showing any report. It is covered by 32 offline tests, and I wrote it up in the README."]],
       links: [["Live demo", "https://rentguard-fwpwhgu6y7iwhzbozcefml.streamlit.app/", true], ["View code", "https://github.com/aishwaryamy/RentGuard"]] },
-    { id: "enrichment", big: true, badge: "Agentic AI · B2B", title: "AI Contact Enrichment Agent", img: "img/contact-enrichment.svg",
+    { id: "enrichment", big: true, badge: "Agentic AI · B2B", title: "AI Contact Enrichment Agent", img: "img/contact-enrichment.jpg",
       blurb: "A conversational agent that turns any B2B prospect into a research brief in about 45 seconds: live company intel, buying signals, ICP scoring and a personalized outreach draft.",
       tags: ["Next.js", "TypeScript", "GPT-4o", "Supabase", "Vercel"],
       sections: [
@@ -90,7 +90,7 @@
     a.className = "proj reveal" + (p.big ? " big" : "");
     a.tabIndex = 0; a.setAttribute("role", "button"); a.dataset.p = p.id;
     a.setAttribute("aria-label", "Open details for " + p.title);
-    a.innerHTML = `<div class="shot"><img src="${p.img}" alt="" loading="lazy"></div><div class="pb"><span class="badge">${esc(p.badge)}</span><h3>${esc(p.title)}</h3><p>${esc(p.blurb)}</p><div class="tags">${p.tags.slice(0, 4).map((t) => `<i>${esc(t)}</i>`).join("")}</div><span class="open">View details</span></div>`;
+    a.innerHTML = `<div class="shot"><img src="${p.img}" alt="" loading="lazy"></div><div class="pb"><span class="badge">${esc(p.badge)}</span><h3>${esc(p.title)}</h3><p>${esc(p.blurb)}</p><div class="tags">${p.tags.slice(0, 4).map((t) => `<i>${esc(t)}</i>`).join("")}</div><div class="pf"><span class="open">View details</span><span class="plinks">${p.links.map(([l, u, pr]) => pr ? `<a class="pl live" href="${u}" target="_blank" rel="noopener">Live demo</a>` : `<a class="pl gh" href="${u}" target="_blank" rel="noopener" aria-label="GitHub repo" title="GitHub"><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.88.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>`).join("")}</span></div></div>`;
     (p.big ? featuredEl : gridEl).appendChild(a);
   });
   const modal = $("#modal");
@@ -106,7 +106,7 @@
   }
   function closeModal() { modal.hidden = true; document.body.classList.remove("lock"); if (lastFocus) lastFocus.focus(); }
   document.addEventListener("click", (e) => {
-    const card = e.target.closest(".proj"); if (card) openProject(card.dataset.p);
+    const card = e.target.closest(".proj"); if (card && !e.target.closest(".plinks")) openProject(card.dataset.p);
     if (e.target.closest("[data-close]")) closeModal();
   });
   document.addEventListener("keydown", (e) => {
