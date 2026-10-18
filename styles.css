@@ -400,3 +400,15 @@ h1,h2,h3,.stat b,.how-n,.pc-back h3{font-weight:600;letter-spacing:-.025em}
 .comets,#net{display:none}
 #netbg{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:-1}
 .tint,.foot,.ask{background:transparent}
+
+/* meteors: 60 streaks, 2.4px head, 50px tail, 3-10s, same geometry as the reference portfolio */
+#netbg,.comets,#net{display:none}
+.meteors{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.meteor{position:absolute;width:2.4px;height:2.4px;border-radius:50%;background:#7cf0c9;box-shadow:0 0 0 1px rgba(255,255,255,.06);transform:rotate(35deg);opacity:0;visibility:hidden;animation:meteorfall 10s linear infinite}
+.meteor i{position:absolute;top:50%;right:0;width:50px;height:1px;transform:translateY(-50%);background:linear-gradient(to left,#7cf0c9,rgba(139,123,255,.35),transparent);z-index:-1}
+@keyframes meteorfall{0%{opacity:0;visibility:hidden;transform:rotate(55deg) translate(-300px)}2%{opacity:1;visibility:visible}70%{opacity:1;visibility:visible}100%{opacity:1;visibility:visible;transform:rotate(55deg) translate(500px)}}
+
+/* softer comets (original intensity), behind all content */
+.meteors,#netbg,#net{display:none}
+.comets{display:block;position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:-1}
+.tint,.foot,.ask{background:transparent}

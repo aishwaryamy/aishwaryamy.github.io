@@ -285,41 +285,33 @@
 
 
 
-/* ---- background: connected-dots network across the whole page + cursor glow ---- */
+
+
+
+
+/* ---- background: cursor glow + mint/violet comets (behind all content) ---- */
 (() => {
   const glow = document.createElement("div"); glow.id = "glow"; glow.setAttribute("aria-hidden", "true"); document.body.appendChild(glow);
-  const cv = document.createElement("canvas"); cv.id = "netbg"; cv.setAttribute("aria-hidden", "true"); document.body.appendChild(cv);
-  const ctx = cv.getContext("2d"); let W = 0, H = 0, nodes = [], mouse = { x: -999, y: -999 };
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const size = () => {
-    const dpr = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight;
-    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const n = Math.max(30, Math.min(90, Math.round(W * H / 15000)));
-    nodes = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, r: Math.random() * 1.6 + .6 }));
-  };
+  addEventListener("pointermove", (e) => { glow.style.transform = `translate(${e.clientX}px,${e.clientY}px)`; document.body.classList.add("hasmouse"); }, { passive: true });
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const cv = document.createElement("canvas"); cv.className = "comets"; cv.setAttribute("aria-hidden", "true"); document.body.appendChild(cv);
+  const ctx = cv.getContext("2d"); let W, H;
+  const size = () => { const dpr = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
   size(); addEventListener("resize", size);
-  addEventListener("pointermove", (e) => {
-    mouse.x = e.clientX; mouse.y = e.clientY;
-    glow.style.transform = `translate(${e.clientX}px,${e.clientY}px)`; document.body.classList.add("hasmouse");
-  }, { passive: true });
+  const ANG = 1.05, dx = Math.cos(ANG), dy = Math.sin(ANG), N = innerWidth < 700 ? 6 : 11;
+  const COL = ["124,240,201", "139,123,255"];
+  const make = (first) => ({ x: Math.random() * (W + 300) - 200, y: first ? Math.random() * H : -Math.random() * 240 - 40, v: 1.4 + Math.random() * 2.2, len: 50, a: 0.28 + Math.random() * 0.32, c: COL[Math.random() < 0.55 ? 0 : 1] });
+  const items = Array.from({ length: N }, () => make(true));
   (function tick() {
     ctx.clearRect(0, 0, W, H);
-    const shift = scrollY * 0.15;
-    const pts = nodes.map((n) => {
-      if (!reduce) { n.x += n.vx; n.y += n.vy; }
-      if (n.x < 0 || n.x > W) n.vx *= -1;
-      if (n.y < 0 || n.y > H) n.vy *= -1;
-      const dx = n.x - mouse.x, dy = n.y - mouse.y, d = Math.hypot(dx, dy);
-      if (d < 140 && d > 0) { n.x += dx / d * .9; n.y += dy / d * .9; }
-      return { x: n.x, y: ((n.y - shift) % H + H) % H, r: n.r };
-    });
-    for (let i = 0; i < pts.length; i++) {
-      const a = pts[i];
-      for (let j = i + 1; j < pts.length; j++) {
-        const b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-        if (d < 130) { ctx.strokeStyle = `rgba(124,240,201,${(1 - d / 130) * .22})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
-      }
-      ctx.fillStyle = "rgba(139,123,255,.7)"; ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, 6.283); ctx.fill();
+    for (const c of items) {
+      c.x += dx * c.v; c.y += dy * c.v;
+      if (c.y - c.len * dy > H || c.x - c.len * dx > W + 100) Object.assign(c, make(false));
+      const tx = c.x - dx * c.len, ty = c.y - dy * c.len, g = ctx.createLinearGradient(tx, ty, c.x, c.y);
+      g.addColorStop(0, `rgba(${c.c},0)`); g.addColorStop(1, `rgba(${c.c},${c.a})`);
+      ctx.strokeStyle = g; ctx.lineWidth = 1.6; ctx.lineCap = "round";
+      ctx.beginPath(); ctx.moveTo(tx, ty); ctx.lineTo(c.x, c.y); ctx.stroke();
+      ctx.fillStyle = `rgba(${c.c},${Math.min(c.a + 0.25, 0.85)})`; ctx.beginPath(); ctx.arc(c.x, c.y, 1.9, 0, 6.283); ctx.fill();
     }
     requestAnimationFrame(tick);
   })();
