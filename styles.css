@@ -337,3 +337,14 @@ body{background:var(--bg);color:var(--ink)}
 .hero .wrap{position:relative;z-index:2}
 #glow{position:fixed;width:520px;height:520px;left:0;top:0;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(139,123,255,.16),transparent 62%);opacity:0;transition:opacity .3s}
 body.hasmouse #glow{opacity:1}
+
+/* how I work */
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.how-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px 22px;box-shadow:var(--shadow);transition:transform .3s,border-color .3s;display:flex;flex-direction:column;gap:10px}
+.how-card:hover{transform:translateY(-6px);border-color:var(--a)}
+.how-n{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;font-size:1.9rem;line-height:1;background:linear-gradient(100deg,var(--a),var(--b,var(--a-d)));-webkit-background-clip:text;background-clip:text;color:transparent}
+.how-card h3{font-size:1.15rem;line-height:1.25}
+.how-card p{color:var(--muted);font-size:.95rem;line-height:1.6}
+.how-card small{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);color:var(--a-d);font-size:.8rem;font-weight:600}
+@media (max-width:1000px){.how-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.how-grid{grid-template-columns:1fr}}

@@ -30,7 +30,6 @@
    "built",
    "build",
    "portfolio",
-   "work",
    "made",
    "created",
    "examples",
@@ -68,7 +67,6 @@
    "opportunity",
    "available",
    "availability",
-   "work",
    "seeking"
   ],
   "text": "She is open to Machine Learning Engineer, AI Engineer and Applied ML roles, and is based in New York. For details like timing or work authorization, please email her directly."
@@ -462,5 +460,25 @@
    "project"
   ],
   "text": "The AI Contact Enrichment Agent is a conversational agent that enriches any B2B prospect in about 45 seconds with live company intelligence, buying signals, ICP scoring and a personalized outreach draft. Built with Next.js, TypeScript, GPT-4o, Supabase and Vercel. Live demo: https://ai-enrichment-agent.vercel.app/ Code: https://github.com/aishwaryamy/ai-enrichment-agent"
+ },
+ {
+  "id": "approach",
+  "title": "How she works",
+  "tags": [
+   "approach",
+   "process",
+   "work",
+   "method",
+   "philosophy",
+   "style",
+   "principles",
+   "how",
+   "values",
+   "habits",
+   "trust",
+   "testing",
+   "measure"
+  ],
+  "text": "Her approach has four habits. 1) Find the real problem first: work out what decision the output feeds and where the data comes from. 2) Ground every answer in source records, with retrieval, citations and guardrails, so a system says it doesn't know instead of guessing (RentGuard, Audit Readiness AI). 3) Measure instead of assuming: compare approaches on a benchmark before choosing, for example Quantamind reached 92.5% with LoRA versus 85.3% with prompt engineering. 4) Break it, then ship it: hunt for edge cases, fix the failure and add a test, like the RentGuard address check that caught a Jersey City address resolving to a Brooklyn building."
  }
 ]
