@@ -307,3 +307,45 @@
   const c = document.querySelector(".pcard"); if (!c) return;
   c.addEventListener("click", (e) => { if (e.target.closest("a")) return; c.classList.toggle("flip"); });
 })();
+
+/* ---- dark theme background animation: network + cursor glow ---- */
+(() => {
+  const hero = document.querySelector(".hero"); if (!hero) return;
+  const glow = document.createElement("div"); glow.id = "glow"; glow.setAttribute("aria-hidden", "true"); document.body.appendChild(glow);
+  const cv = document.createElement("canvas"); cv.id = "net"; cv.setAttribute("aria-hidden", "true"); hero.insertBefore(cv, hero.firstChild);
+  hero.style.position = "relative"; hero.style.overflow = "hidden";
+  const ctx = cv.getContext("2d"); let W = 0, H = 0, nodes = [], mouse = { x: -999, y: -999 }, vis = true;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const size = () => {
+    const dpr = Math.min(devicePixelRatio || 1, 2); W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.max(28, Math.min(85, Math.round(W * H / 16000)));
+    nodes = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, r: Math.random() * 1.6 + .6 }));
+  };
+  size(); addEventListener("resize", size);
+  new IntersectionObserver((e) => { vis = e[0].isIntersecting; }).observe(hero);
+  addEventListener("pointermove", (e) => {
+    const b = cv.getBoundingClientRect(); mouse.x = e.clientX - b.left; mouse.y = e.clientY - b.top;
+    glow.style.transform = `translate(${e.clientX}px,${e.clientY}px)`; document.body.classList.add("hasmouse");
+  }, { passive: true });
+  (function tick() {
+    if (vis) {
+      ctx.clearRect(0, 0, W, H);
+      for (const n of nodes) {
+        if (!reduce) { n.x += n.vx; n.y += n.vy; }
+        if (n.x < 0 || n.x > W) n.vx *= -1; if (n.y < 0 || n.y > H) n.vy *= -1;
+        const dx = n.x - mouse.x, dy = n.y - mouse.y, d = Math.hypot(dx, dy);
+        if (d < 140 && d > 0) { n.x += dx / d * .9; n.y += dy / d * .9; }
+      }
+      for (let i = 0; i < nodes.length; i++) {
+        const a = nodes[i];
+        for (let j = i + 1; j < nodes.length; j++) {
+          const b = nodes[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+          if (d < 130) { ctx.strokeStyle = `rgba(124,240,201,${(1 - d / 130) * .26})`; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+        }
+        ctx.fillStyle = "rgba(139,123,255,.75)"; ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, 6.283); ctx.fill();
+      }
+    }
+    requestAnimationFrame(tick);
+  })();
+})();
