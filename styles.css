@@ -395,3 +395,8 @@ h1,h2,h3,.stat b,.how-n,.pc-back h3{font-weight:600;letter-spacing:-.025em}
 .how-n{font-style:normal;font-size:1.8rem;font-weight:700}
 .brand{font-weight:700;font-size:1.15rem}
 @media (max-width:600px){.hero h1{font-size:clamp(2.4rem,11vw,3rem)}}
+
+/* page-wide network, always behind text and cards */
+.comets,#net{display:none}
+#netbg{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:-1}
+.tint,.foot,.ask{background:transparent}
